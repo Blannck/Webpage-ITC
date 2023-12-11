@@ -111,6 +111,7 @@ p {
 }
 
 /*Celsius to Fahrenheit*/
+/* Body */
 body {
   font-family: Arial, sans-serif;
   background-color: #f7f7f7;
@@ -118,22 +119,34 @@ body {
   padding: 20px;
 }
 
+/* Container */
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
 h2 {
   text-align: center;
   color: #333;
 }
 
+/* Instructions */
 p {
   color: #666;
   text-align: center;
 }
 
+/* Label */
 label {
   display: block;
   margin-bottom: 5px;
   color: #333;
 }
 
+/* Input */
 input[type="number"] {
   width: 100%;
   padding: 8px;
@@ -147,11 +160,13 @@ input[type="number"]:focus {
   border-color: #0066cc;
 }
 
+/* Converted Value */
 span {
   font-weight: bold;
   color: #0066cc;
 }
 
+/* Home Link */
 a {
   display: block;
   text-align: center;
