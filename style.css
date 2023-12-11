@@ -184,39 +184,33 @@ a:hover {
 
 /*Factorial*/
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
   margin: 0;
-  padding: 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 input[type="number"],
 button {
-  padding: 10px;
+  padding: 10px 15px;
   margin: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
 }
 
 button {
+  background-color: #3498db;
+  color: white;
   cursor: pointer;
-  background-color: #007bff;
-  color: #fff;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
-}
-
-input[type="number"],
-input[type="text"],
-button,
-#a {
-  font-size: 16px;
+  background-color: #2980b9;
 }
 
 input[type="number"],
@@ -226,10 +220,24 @@ button,
   width: 200px;
 }
 
+input[type="number"],
+input[type="text"],
+button {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input[type="number"],
+input[type="text"],
+button,
 #a {
-  margin-top: 20px;
+  font-size: 16px;
+}
+
+#a {
+  display: block;
+  margin-top: 10px;
   text-decoration: none;
-  color: #007bff;
+  color: #3498db;
 }
 
 #a:hover {
