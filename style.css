@@ -58,7 +58,6 @@ body {
 }
 
 .w3-dropdown-content a:hover {
-  background-color: #f1f1f1;
   transition: background-color 0.3s ease-in-out;
 }
 
