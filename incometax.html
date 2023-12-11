@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Income Tax Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to left, #040404, #000000, #656565);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+
+    label {
+      margin-bottom: 10px;
+      color: #ffffff;
+
+    }
+
+    input[type="text"] {
+      width: 10%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    #myHeader {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    a {
+      text-align: center;
+      text-decoration: none;
+      color: #3498db;
+      margin-top: 20px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><label>Income:</label><br></h1>
+  <input type="text" id="its"><br>
+  <h1 id="myHeader">Income Tax </h1>
+  <button onclick="Income()">Submit</button>
+  <script>
+    function Income() {
+      var it = parseInt(document.getElementById("its").value);
+      var tax = 0;
+      if (it <= 250000)
+        tax = 0;
+      else if (it <= 400000)
+        tax = 0.2 * (it - 250000);
+      else if (it <= 800000)
+        tax = (0.25 * (it - 400000)) + 30000;
+      else if (it <= 2000000)
+        tax = (0.3 * (it - 800000)) + 130000;
+      else if (it <= 8000000)
+        tax = (0.32 * (it - 2000000)) + 490000;
+      else
+        tax = (0.35 * (it - 8000000)) + 2410000;
+      document.getElementById("myHeader").innerHTML = tax;
+    }
+  </script>
+  <a href="index.html">Home</a>
+</body>
+
+</html>

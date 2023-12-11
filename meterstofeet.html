@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Meters to Feet Length Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to left, #040404, #000000, #656565);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h2 {
+      color: #ffffff;
+    }
+
+    p {
+      color: #ffffff;
+      text-align: center;
+    }
+
+    label {
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    #outputFeet {
+      font-size: 18px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    a {
+      text-align: center;
+      text-decoration: none;
+      color: #3498db;
+      margin-top: 20px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <h2>Length Converter</h2>
+  <p>Type a value in the Meters field to convert the value to Feet:</p>
+
+
+  <p>
+    <label>Meters</label>
+    <input id="inputMeters" type="number" placeholder="Meters" oninput="LengthConverter(this.value)"
+      onchange="LengthConverter(this.value)">
+  </p>
+  <p>Feet: <span id="outputFeet"></span></p>
+
+
+  <script>
+    function LengthConverter(valNum) {
+      document.getElementById("outputFeet").innerHTML = valNum * 3.2808;
+    }
+  </script>
+  <a href="index.html">Home</a>
+</body>
+
+</html>

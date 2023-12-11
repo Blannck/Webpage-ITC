@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Fahrenheit to Celsius Temperature Converter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to left, #040404, #000000, #656565);
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+
+    h2 {
+      text-align: center;
+      color: #fffdfd;
+    }
+
+    label {
+      margin-bottom: 10px;
+      color: #fffdfd;
+    }
+
+    input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-weight: bold;
+      color: #3498db;
+      margin-bottom: 10px;
+    }
+
+    a {
+      text-align: center;
+      text-decoration: none;
+      color: #3498db;
+      margin-top: 20px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .text-dark {
+      color: #fffdfd;
+    }
+
+    .text-light {
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Temperature Converter</h2>
+  <div class="text-dark">
+    <p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+  </div>
+
+  <p>
+    <label>Fahrenheit</label>
+    <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)"
+      onchange="temperatureConverter(this.value)">
+  </p>
+  <div class="text-light">
+    <p>Celsius: <span id="outputCelsius"></span></p>
+  </div>
+  <script>
+    function temperatureConverter(valNum) {
+      valNum = parseFloat(valNum);
+      document.getElementById("outputCelsius").innerHTML = (valNum - 32) / 1.8;
+    }
+
+  </script>
+  <a href="index.html">Home</a>
+</body>
+
+</html>

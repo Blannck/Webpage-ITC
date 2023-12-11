@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Factorial Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to left, #040404, #000000, #656565);
+            margin: 0;
+            padding: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        input[type="number"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #3498db;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function show() {
+            event.preventDefault();
+
+            var i, no, fact;
+            fact = 1;
+            no = Number(document.getElementById("num").value);
+            for (i = 1; i <= no; i++) {
+                fact = fact * i;
+            }
+            document.getElementById("answer").value = fact;
+        }
+    </script>
+
+<body>
+    <form onsubmit="show(event)">
+        <h2>Factorial Calculator</h2>
+        <div class="center-text">
+            <p>Enter a number to calculate its factorial:</p>
+        </div>
+        <input id="num" type="number" placeholder="Enter Num">
+        <button onclick="show()">Factorial</button>
+        <input id="answer" type="text" placeholder="Factorial Result">
+
+        <a href="index.html">Home</a>
+    </form>
+    </head>
+</body>
+
+</html>

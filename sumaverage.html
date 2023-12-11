@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <title>JavaScript program to find the Sum of n natural numbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to left, #040404, #000000, #656565);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        h1 {
+            color: #fffbfb;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table td {
+            padding: 8px;
+        }
+
+        input[type="text"] {
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #num,
+        #ave {
+            margin-top: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+    </style>
+    <h1>Sum and Average Of First n Natural Numbers</h1>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td> <input type="text" name="a" id="first" /> </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="button-container">
+                    <button onclick="sum ()">Submit</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div id="num"></div>
+    <div id="ave"></div>
+</body>
+
+<script>
+    function sum() {
+        var n, i, sum = 0;
+        n = parseInt(document.getElementById("first").value);
+        for (i = 1; i <= n; i++) {
+            sum = sum + i;
+        }
+        aves = sum / n;
+        document.getElementById("num").innerHTML = "Sum of " + n + " natural numbers is : " + sum;
+        document.getElementById("ave").innerHTML = "Ave of " + n + " natural numbers is : " + aves;
+    }
+
+
+</script>
+<a href="index.html">Home</a>
+
+</html>
