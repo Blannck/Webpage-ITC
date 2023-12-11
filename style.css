@@ -3,7 +3,8 @@ body {
   font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
 /* Navbar Styles */
@@ -16,12 +17,12 @@ body {
 .w3-bar {
   overflow: hidden;
   background-color: #333;
+  color: white;
 }
 
 .w3-bar a {
   float: left;
   display: block;
-  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -52,7 +53,7 @@ h2, h3 {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 32px;
 }
 
 h3 {
@@ -65,6 +66,7 @@ img {
   height: auto;
   display: block;
   margin: 0 auto;
+  border-radius: 5px;
 }
 
 /* Paragraph Styles */
@@ -72,16 +74,11 @@ p {
   line-height: 1.6;
 }
 
-/* Other Elements */
 .bold {
   font-weight: bold;
 }
 
-.u-underline {
-  text-decoration: underline;
-}
-
-/* Adjustments for Small Screens */
+/* Small Screen Adjustments */
 @media screen and (max-width: 600px) {
   .w3-bar a:not(:first-child) {display: none;}
   .w3-bar a.w3-bar-item.w3-button.w3-hide-medium.w3-hide-large {float: right;display: block;}
@@ -89,4 +86,3 @@ p {
   .w3-bar a.w3-bar-item.w3-button.w3-hide-medium.w3-hide-large.icon:hover {background-color: #333;}
   .w3-show {display: block;}
 }
-
